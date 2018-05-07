@@ -1,0 +1,52 @@
+<!doctype>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<script src="main.js"></script>
+</head>
+
+<body>
+<div class='logo' style='margin-top:-15%;'>
+<h1 >Convert IT</h1>
+    <p>Quick Online Conversions</p>
+</div>
+<div class="corner-ribbon top-left sticky red shadow">Length</div>
+<div class="corner-ribbon top-right sticky blue">Temperature</div>
+<div class="corner-ribbon bottom-left sticky orange">Weight</div>
+<div class="corner-ribbon bottom-right sticky green shadow">Markup</div>
+   
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Weight</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Length</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Temperature</button>
+</div>
+
+<div id="London" class="tabcontent">
+
+  <label>Pounds</label>
+  <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+<p>Kilograms: <span id="outputKilograms"></span></p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <label>Feet</label>
+   <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+
+<p>Meters: <span id="outputMeters"></span></p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+  oninput="temperatureConverter(this.value)"
+  onchange="temperatureConverter(this.value)">
+
+<p>Celsius: <span id="outputCelsius"></span></p>
+</div>
+
+</body>
+
+
+</html>
